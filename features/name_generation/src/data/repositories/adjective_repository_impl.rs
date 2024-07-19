@@ -1,7 +1,7 @@
 use crate::domain::repositories::adjective_repository::AdjectiveRepository;
 
 pub struct AdjectiveRepositoryImpl {
-    pub adjectives: Vec<String>,
+    adjectives: Vec<String>,
 }
 
 impl AdjectiveRepositoryImpl {
@@ -81,7 +81,7 @@ impl AdjectiveRepositoryImpl {
 }
 
 impl AdjectiveRepository for AdjectiveRepositoryImpl {
-    fn fetch_all(&self) -> Result<Vec<String>, String> {
+    async fn fetch_all(&self) -> Result<Vec<String>, String> {
         Ok(self.adjectives.clone())
     }
 }
@@ -90,8 +90,8 @@ impl AdjectiveRepository for AdjectiveRepositoryImpl {
 mod tests {
     use super::*;
 
-    #[test]
-    fn fetch_all_should_return_expected() {
+    #[tokio::test]
+    async fn fetch_all_should_return_expected() {
         let expected: Vec<String> = vec![
             "autumn",
             "hidden",
@@ -162,7 +162,7 @@ mod tests {
         .map(|x| x.to_string())
         .collect::<Vec<String>>();
 
-        let result: Result<Vec<String>, String> = AdjectiveRepositoryImpl::new().fetch_all();
+        let result: Result<Vec<String>, String> = AdjectiveRepositoryImpl::new().fetch_all().await;
 
         assert_eq!(result, Ok(expected));
     }
