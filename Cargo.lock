@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "token_retrieval"
+name = "name_generation"
 version = "0.1.0"
