@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "haikunators"
+name = "token_retrieval"
 version = "0.1.0"

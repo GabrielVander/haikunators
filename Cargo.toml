@@ -1,6 +1,5 @@
-[package]
-name = "haikunators"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
+[workspace]
+members = [
+  "features/name_generation"
+]
+resolver = "2"
