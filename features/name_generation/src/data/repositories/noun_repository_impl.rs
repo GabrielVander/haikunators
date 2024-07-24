@@ -3,7 +3,7 @@ use async_trait::async_trait;
 use crate::domain::repositories::noun_repository::NounRepository;
 
 #[derive(Debug)]
-struct NounRepositoryImpl {
+pub struct NounRepositoryImpl {
     nouns: Vec<String>,
 }
 

@@ -1,5 +1,11 @@
 [workspace]
-members = [
-  "features/name_generation"
+members = [ 
+  "features/name_generation",
+  "cli",
 ]
 resolver = "2"
+
+[workspace.dependencies]
+tokio = { version = "1.38.1", features = ["rt", "rt-multi-thread", "macros"] }
+async-trait = "0.1.81"
+test-case = "3.3.1"

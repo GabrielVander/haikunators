@@ -3,7 +3,7 @@ use crate::domain::repositories::{
 };
 use rand::prelude::SliceRandom;
 
-struct GenerateNameUseCase {
+pub struct GenerateNameUseCase {
     adjective_repository: Box<dyn AdjectiveRepository>,
     noun_repository: Box<dyn NounRepository>,
 }
