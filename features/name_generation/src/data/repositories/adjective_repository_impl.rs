@@ -1,3 +1,5 @@
+use async_trait::async_trait;
+
 use crate::domain::repositories::adjective_repository::AdjectiveRepository;
 
 pub struct AdjectiveRepositoryImpl {
@@ -80,6 +82,7 @@ impl AdjectiveRepositoryImpl {
     }
 }
 
+#[async_trait]
 impl AdjectiveRepository for AdjectiveRepositoryImpl {
     async fn fetch_all(&self) -> Result<Vec<String>, String> {
         Ok(self.adjectives.clone())

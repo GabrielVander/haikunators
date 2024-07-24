@@ -1,3 +1,5 @@
+use async_trait::async_trait;
+
 use crate::domain::repositories::noun_repository::NounRepository;
 
 #[derive(Debug)]
@@ -81,6 +83,7 @@ impl NounRepositoryImpl {
     }
 }
 
+#[async_trait]
 impl NounRepository for NounRepositoryImpl {
     async fn fetch_all(&self) -> Result<Vec<String>, String> {
         Ok(self.nouns.clone())
