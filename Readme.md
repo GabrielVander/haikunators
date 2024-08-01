@@ -9,7 +9,7 @@ Haikunator generates unique and memorable names for your projects, services, or 
 
 **Why Haikunators?**
 
-I built Haikunators to learn a little bit of Rust and attempt to implement a Clean Architecture using Cargo Workspaces.
+I built Haikunators to learn a little bit of Rust and attempt to implement a Clean Architecture using [Cargo Workspaces](https://doc.rust-lang.org/book/ch14-03-cargo-workspaces.html).
 
 **Features**
 
