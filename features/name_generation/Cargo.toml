@@ -5,6 +5,6 @@ edition = "2021"
 
 [dependencies]
 async-trait = { workspace = true }
-rand = "0.8.5"
+rand = "0.8.6"
 test-case = { workspace = true }
 tokio = { workspace = true }
